@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "194753208481",
+    "project_id": "testnotification-1ee6f",
+    "storage_bucket": "testnotification-1ee6f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194753208481:android:1e1d6da7e29621ec11d0e0",
+        "android_client_info": {
+          "package_name": "com.notifylocale.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk9f_L9sCdxocZM8V73N310b0GFBy5Uew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

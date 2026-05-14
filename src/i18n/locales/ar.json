@@ -1,0 +1,23 @@
+{
+  "notification": {
+    "order_shipped": "تم شحن الطلب",
+    "order_shipped_body": "الخاص بك {{item}} (#{{orderId}}) في الطريق!",
+    "welcome": "أهلاً بك!",
+    "welcome_body": "شكراً لانضمامك إلى NotifyLocale.",
+    "flash_sale": "تخفيضات هائلة 🔥",
+    "flash_sale_body": "خصم {{discount}}% على كل شيء. متبقي {{hours}} ساعة."
+  },
+  "ui": {
+    "change_language": "تغيير اللغة",
+    "test_notifications": "اختبار الإشعارات",
+    "simulate_order": "محاكاة شحن الطلب",
+    "simulate_welcome": "محاكاة الترحيب",
+    "simulate_sale": "محاكاة عرض التخفيضات",
+    "log_title": "سجل الإشعارات (آخر 5)",
+    "log_empty": "لا توجد إشعارات بعد.",
+    "fcm_token": "رمز FCM",
+    "token_loading": "جارٍ تحميل الرمز…",
+    "copy_token": "نسخ الرمز",
+    "copied": "تم النسخ!"
+  }
+}

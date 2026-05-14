@@ -1,0 +1,23 @@
+{
+  "notification": {
+    "order_shipped": "অর্ডার পাঠানো হয়েছে",
+    "order_shipped_body": "আপনার {{item}} (#{{orderId}}) পথে আছে!",
+    "welcome": "স্বাগতম!",
+    "welcome_body": "NotifyLocale-এ যোগদানের জন্য ধন্যবাদ।",
+    "flash_sale": "ফ্ল্যাশ সেল 🔥",
+    "flash_sale_body": "সবকিছুর উপর {{discount}}% ছাড়। {{hours}} ঘণ্টা বাকি।"
+  },
+  "ui": {
+    "change_language": "ভাষা পরিবর্তন করুন",
+    "test_notifications": "নোটিফিকেশন পরীক্ষা",
+    "simulate_order": "অর্ডার পাঠানো সিমুলেট করুন",
+    "simulate_welcome": "স্বাগতম সিমুলেট করুন",
+    "simulate_sale": "ফ্ল্যাশ সেল সিমুলেট করুন",
+    "log_title": "নোটিফিকেশন লগ (শেষ ৫টি)",
+    "log_empty": "এখনও কোনো নোটিফিকেশন নেই।",
+    "fcm_token": "FCM টোকেন",
+    "token_loading": "টোকেন লোড হচ্ছে…",
+    "copy_token": "টোকেন কপি করুন",
+    "copied": "কপি হয়েছে!"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "notification": {
+    "order_shipped": "Commande expédiée",
+    "order_shipped_body": "Votre {{item}} (#{{orderId}}) est en route !",
+    "welcome": "Bienvenue !",
+    "welcome_body": "Merci d'avoir rejoint NotifyLocale.",
+    "flash_sale": "Vente flash 🔥",
+    "flash_sale_body": "{{discount}}% de réduction sur tout. {{hours}}h restantes."
+  },
+  "ui": {
+    "change_language": "Changer de langue",
+    "test_notifications": "Tester les notifications",
+    "simulate_order": "Simuler une commande expédiée",
+    "simulate_welcome": "Simuler le message de bienvenue",
+    "simulate_sale": "Simuler la vente flash",
+    "log_title": "Journal des notifications (5 dernières)",
+    "log_empty": "Aucune notification pour le moment.",
+    "fcm_token": "Jeton FCM",
+    "token_loading": "Chargement du jeton…",
+    "copy_token": "Copier le jeton",
+    "copied": "Copié !"
+  }
+}

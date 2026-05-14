@@ -1,0 +1,23 @@
+{
+  "notification": {
+    "order_shipped": "Order shipped",
+    "order_shipped_body": "Your {{item}} (#{{orderId}}) is on the way!",
+    "welcome": "Welcome!",
+    "welcome_body": "Thanks for joining NotifyLocale.",
+    "flash_sale": "Flash sale 🔥",
+    "flash_sale_body": "{{discount}}% off everything. {{hours}}h left."
+  },
+  "ui": {
+    "change_language": "Change Language",
+    "test_notifications": "Test Notifications",
+    "simulate_order": "Simulate Order Shipped",
+    "simulate_welcome": "Simulate Welcome",
+    "simulate_sale": "Simulate Flash Sale",
+    "log_title": "Notification Log (Last 5)",
+    "log_empty": "No notifications yet.",
+    "fcm_token": "FCM Token",
+    "token_loading": "Loading token…",
+    "copy_token": "Copy Token",
+    "copied": "Copied!"
+  }
+}
