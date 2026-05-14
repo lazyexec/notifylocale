@@ -1,7 +1,5 @@
 name: iOS EAS Build
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
     inputs:
       profile:
