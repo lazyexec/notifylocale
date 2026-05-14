@@ -6,6 +6,7 @@ import * as Clipboard from 'expo-clipboard';
 import messaging from '@react-native-firebase/messaging';
 import { useNotificationStore } from '../store/notificationStore';
 import { resolveAndDisplay } from '../notifications/handler';
+import { persistPreferredLanguage } from '../i18n/languagePreference';
 
 const HomeScreen = () => {
   const { t, i18n } = useTranslation();
@@ -36,6 +37,7 @@ const HomeScreen = () => {
   };
 
   const changeLanguage = async (lng: string) => {
+    await persistPreferredLanguage(lng);
     await i18n.changeLanguage(lng);
     const isRTL = lng === 'ar';
     if (I18nManager.isRTL !== isRTL) {
