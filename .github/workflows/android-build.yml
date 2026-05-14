@@ -9,6 +9,8 @@ on:
         default: Debug
         type: choice
         options: [Debug, Release]
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,9 +44,34 @@ jobs:
         working-directory: android
         run: ./gradlew assemble${{ env.VARIANT }} --no-daemon
 
-      - name: Upload APK
+      - name: Stage APK
+        id: stage
+        run: |
+          mkdir -p dist
+          SHA_SHORT=$(git rev-parse --short HEAD)
+          OUT="dist/notifylocale-${{ env.VARIANT }}-build${{ github.run_number }}-${SHA_SHORT}.apk"
+          cp $(find android/app/build/outputs/apk -name '*.apk' | head -1) "$OUT"
+          echo "apk=$OUT" >> "$GITHUB_OUTPUT"
+          echo "sha_short=$SHA_SHORT" >> "$GITHUB_OUTPUT"
+
+      - name: Upload artifact (always)
         uses: actions/upload-artifact@v4
         with:
           name: notifylocale-${{ env.VARIANT }}-apk
-          path: android/app/build/outputs/apk/**/*.apk
+          path: ${{ steps.stage.outputs.apk }}
           if-no-files-found: error
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: Build #${{ github.run_number }} (${{ env.VARIANT }})
+          body: |
+            Automated build from `${{ github.sha }}`.
+            - Variant: **${{ env.VARIANT }}**
+            - Commit: ${{ github.event.head_commit.message || 'manual dispatch' }}
+
+            Install on Android: download the `.apk` below and open it on the device (allow "install from unknown sources" if prompted).
+          files: ${{ steps.stage.outputs.apk }}
+          prerelease: true
+          fail_on_unmatched_files: true
