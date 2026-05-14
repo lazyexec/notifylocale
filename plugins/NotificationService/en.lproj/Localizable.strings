@@ -1,0 +1,6 @@
+"notification.order_shipped"      = "Order shipped";
+"notification.order_shipped_body" = "Your {{item}} (#{{orderId}}) is on the way!";
+"notification.welcome"            = "Welcome!";
+"notification.welcome_body"       = "Thanks for joining NotifyLocale.";
+"notification.flash_sale"         = "Flash sale";
+"notification.flash_sale_body"    = "{{discount}}% off everything. {{hours}}h left.";

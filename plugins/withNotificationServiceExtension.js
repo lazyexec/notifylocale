@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const TARGET_NAME = 'NotificationService';
-const SOURCE_DIR = path.join('ios', 'NotificationService');
+const SOURCE_DIR = path.join('plugins', 'NotificationService');
 const LOCALES = ['en', 'ar', 'fr', 'bn'];
 
 function copyDir(src, dest) {
@@ -25,7 +25,13 @@ const withCopySources = (config) =>
       const platformRoot = cfg.modRequest.platformProjectRoot;
       const from = path.join(projectRoot, SOURCE_DIR);
       const to = path.join(platformRoot, TARGET_NAME);
-      if (fs.existsSync(from)) copyDir(from, to);
+      if (!fs.existsSync(from)) {
+        throw new Error(
+          `[withNotificationServiceExtension] Missing source folder at ${from}. ` +
+            'Add NotificationService.swift, Info.plist, and locale .strings files there.'
+        );
+      }
+      copyDir(from, to);
       return cfg;
     },
   ]);

@@ -1,0 +1,6 @@
+"notification.order_shipped"      = "تم شحن الطلب";
+"notification.order_shipped_body" = "الخاص بك {{item}} (#{{orderId}}) في الطريق!";
+"notification.welcome"            = "أهلاً بك!";
+"notification.welcome_body"       = "شكراً لانضمامك إلى NotifyLocale.";
+"notification.flash_sale"         = "تخفيضات هائلة";
+"notification.flash_sale_body"    = "خصم {{discount}}% على كل شيء. متبقي {{hours}} ساعة.";

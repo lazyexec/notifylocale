@@ -1,0 +1,6 @@
+"notification.order_shipped"      = "অর্ডার পাঠানো হয়েছে";
+"notification.order_shipped_body" = "আপনার {{item}} (#{{orderId}}) পথে আছে!";
+"notification.welcome"            = "স্বাগতম!";
+"notification.welcome_body"       = "NotifyLocale-এ যোগদানের জন্য ধন্যবাদ।";
+"notification.flash_sale"         = "ফ্ল্যাশ সেল";
+"notification.flash_sale_body"    = "সবকিছুর উপর {{discount}}% ছাড়। {{hours}} ঘণ্টা বাকি।";
