@@ -14,8 +14,13 @@ const resources = {
   bn: { translation: bn },
 };
 
-const locales = RNLocalize.getLocales();
-const languageCode = locales[0]?.languageCode || 'en';
+let languageCode = 'en';
+try {
+  const locales = RNLocalize.getLocales();
+  languageCode = locales[0]?.languageCode || 'en';
+} catch (e) {
+  console.warn('[i18n] getLocales failed, falling back to en:', e);
+}
 
 i18n
   .use(initReactI18next)

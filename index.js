@@ -1,29 +1,11 @@
-import './src/i18n'; // MUST BE FIRST
-import { registerRootComponent } from 'expo';
-import { ExpoRoot } from 'expo-router';
+import './src/i18n';
 import messaging from '@react-native-firebase/messaging';
 import { resolveAndDisplay } from './src/notifications/handler';
-import { setupChannels } from './src/notifications/channels';
-import React, { useEffect } from 'react';
 
-// Background message handler
-messaging().setBackgroundMessageHandler(resolveAndDisplay);
-
-function AppFake() {
-  useEffect(() => {
-    setupChannels();
-  }, []);
-  return null;
+try {
+  messaging().setBackgroundMessageHandler(resolveAndDisplay);
+} catch (e) {
+  console.warn('[FCM] setBackgroundMessageHandler failed:', e);
 }
 
-function HeadlessCheck(props) {
-  if (props.isHeadless) {
-    return <AppFake />;
-  }
-  
-  // Expo Router entry logic
-  const ctx = require.context('./app');
-  return <ExpoRoot context={ctx} />;
-}
-
-registerRootComponent(HeadlessCheck);
+require('expo-router/entry');
