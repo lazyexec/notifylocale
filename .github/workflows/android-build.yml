@@ -6,7 +6,7 @@ on:
     inputs:
       variant:
         description: Gradle variant to build
-        default: Debug
+        default: Release
         type: choice
         options: [Debug, Release]
 permissions:
